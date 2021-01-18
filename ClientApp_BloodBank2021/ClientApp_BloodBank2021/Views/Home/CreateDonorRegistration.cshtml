@@ -1,0 +1,85 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="~/Scripts/jquery-3.5.1.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.js"></script>
+</head>
+<body>
+    <form action="/" method="post" id="frmDonor">
+        <table id="DonorDataTable">
+            <tr>
+                <td>DonorName</td>
+                <td><input type="text" name="DonorName" id="DonorName" value="" class="form-control" placeholder="DonorName" /></td>
+                <td>FatherName</td>
+                <td><input type="text" name="FatherName" id="FatherName" value="" class="form-control" placeholder="FatherName" /></td>
+                <td>DonorContactNumber</td>
+                <td><input type="text" name="DonorContactNumber" id="DonorContactNumber" value="" class="form-control" placeholder="DonorContactNumber" /></td>
+            </tr>
+            <tr>
+                <td>BloodGroup</td>
+                <td><select id="dptBloodGroup" class="form-control"></select></td>
+                <td>Address</td>
+                <td><input type="text" name="Address" id="Address" value="" class="form-control" placeholder="Address" /></td>
+                <td>Gender</td>
+                <td><select id="dptGender" class="form-control"></select></td>
+            </tr>
+            <tr>
+                <td>Country</td>
+                <td><select id="dptCountry" class="form-control"></select></td>
+                <td>District</td>
+                <td><select id="dptDistrict" class="form-control"><option value="">Select District</option></select></td>
+                <td>Thana</td>
+                <td><select id="dptThana" class="form-control"><option value="">Select Thana</option></select></td>
+            </tr>
+            <tr>
+                <td>Height</td>
+                <td><input type="text" name="Height" id="Height" value="" class="form-control" placeholder="Height" /></td>
+                <td>Weight</td>
+                <td><input type="text" name="Weight" id="Weight" value="" class="form-control" placeholder="Weight" /></td>
+                <td>NIDorBirthId</td>
+                <td><input type="text" name="NIDorBirthId" id="NIDorBirthId" value="" class="form-control" placeholder="NIDorBirthId" /></td>
+            </tr>
+            <tr>
+                <td>BirthDate</td>
+                <td><input type="datetime-local" name="BirthDate" id="BirthDate" value="" class="form-control" placeholder="BirthDate" /></td>
+                <td>Email</td>
+                <td><input type="text" name="Email" id="Email" value="" class="form-control" placeholder="Email" /></td>
+                <td>Profession</td>
+                <td><input type="text" name="Profession" id="Profession" value="" class="form-control" placeholder="Profession" /></td>
+            </tr>
+            <tr>
+                <td>LastWorkPlace</td>
+                <td><input type="text" name="LastWorkPlace" id="LastWorkPlace" value="" class="form-control" placeholder="LastWorkPlace" /></td>
+                <td>Religion</td>
+                <td><select id="dptReligion" class="form-control"></select></td>
+                
+            </tr>
+            <tr>
+                <td>Smocker?</td>
+                <td><input type="radio" name="Smocker"  value="1"  />Yes <input type="radio" name="Smocker" id="Smocker" value="0" checked/>No</td>
+                <td>DrugAddicted?</td>
+                <td><input type="radio" name="DrugAddicted"  value="1" />Yes <input type="radio" name="DrugAddicted" id="DrugAddicted" value="0" checked/>No</td>
+                <td>BloodDonateExperience?</td>
+                <td><input type="radio" name="BloodDonateExperience"  value="1" />Yes <input type="radio" name="BloodDonateExperience" id="BloodDonateExperience" value="0" checked/>No</td>
+            </tr>
+            <tr>
+                <td>MajorOperation?</td>
+                <td><input type="radio" name="MajorOperation" value="1" />Yes <input type="radio" name="MajorOperation" id="MajorOperation" value="0" checked/>No</td>
+                <td>MajorPhysicalProblem?</td>
+                <td><input type="radio" name="MajorPhysicalProblem"  value="1" placeholder="MajorPhysicalProblem" />Yes <input type="radio" name="MajorPhysicalProblem" id="MajorPhysicalProblem" value="0" placeholder="MajorPhysicalProblem" />No</td>
+
+            </tr>
+            <tr>
+                <td><button type="button" class="btn btn-success" onclick="CreateNewDonor()">Save</button>|<button type="button" class="btn btn-warning" onclick="CancelRequest()">Cancel</button></td>
+                
+            </tr>
+        </table>
+    </form>
+
+    <script src="~/Scripts/BloodAppScripts/BloodDonorScripts.js"></script>
+    <script src="~/Scripts/BloodAppScripts/DropDownLoadScripts.js"></script>
+</body>
+</html>
+

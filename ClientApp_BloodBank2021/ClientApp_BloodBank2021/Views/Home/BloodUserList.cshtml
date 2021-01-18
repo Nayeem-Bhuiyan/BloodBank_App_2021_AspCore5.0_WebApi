@@ -1,0 +1,96 @@
+﻿
+<html>
+<head>
+    <title></title>
+    <script src="~/Scripts/jquery-3.5.1.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.js"></script>
+
+</head>
+<body>
+    <button type="button" class="btn btn-primary" id="btnShowModal">Create New</button>
+    <table class="table table-bordered table-striped">
+        <thead class="bg-primary">
+            <tr>
+                <th>UserName</th>
+                <th>UserMobile</th>
+                <th>UserAddress</th>
+                <th>ReasonOfBlood</th>
+                <th>AmountOfBloodRequested</th>
+                <th>BloodRequestDate</th>
+                <th>BloodNeedDate</th>
+                <th>BloodGroupName</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tblBloodUserData">
+        </tbody>
+    </table>
+
+    <div>
+        <!-- Modal -->
+        <div class="modal fade" id="UserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <form action="/" method="post">
+                            <table>
+                                <tr>
+                                    <td>UserName</td>
+                                    <td><input type="text" name="UserName" id="UserName" value="" class="form-control" placeholder="UserName" /></td>
+                                </tr>
+                                <tr>
+                                    <td>UserMobile</td>
+                                    <td><input type="text" name="UserMobile" id="UserMobile" value="" class="form-control" placeholder="UserMobile" /></td>
+                                </tr>
+                                <tr>
+                                    <td>UserAddress</td>
+                                    <td><input type="text" name="UserAddress" id="UserAddress" value="" class="form-control" placeholder="UserAddress" /></td>
+                                </tr>
+                                <tr>
+                                    <td>BloodGroup</td>
+                                    <td><select id="dptBloodGroup" class="form-control"></select></td>
+                                </tr>
+                                <tr>
+                                    <td>ReasonOfBlood</td>
+                                    <td><input type="text" name="ReasonOfBlood" id="ReasonOfBlood" value="" class="form-control" placeholder="ReasonOfBlood" /></td>
+                                </tr>
+                                <tr>
+                                    <td>AmountOfBlood</td>
+                                    <td><input type="text" name="AmountOfBloodRequested" id="AmountOfBloodRequested" value="" class="form-control" placeholder="AmountOfBloodRequested" /></td>
+                                </tr>
+                                <tr>
+                                    <td>BloodRequest Date </td>
+                                    <td><input type="datetime-local" name="Date_BloodRequest " id="Date_BloodRequest " value="" class="form-control" placeholder="Request Date " /></td>
+                                </tr>
+                                <tr>
+                                    <td>BloodNeed Date </td>
+                                    <td><input type="datetime-local" name="Date_BloodNeed " id="Date_BloodNeed " value="" class="form-control" placeholder="Need Date" /></td>
+                                </tr>
+
+
+                            </table>
+                        </form>
+                        
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="btnSave">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/Scripts/BloodAppScripts/BloodUserScripts.js"></script>
+</body>
+</html>
+

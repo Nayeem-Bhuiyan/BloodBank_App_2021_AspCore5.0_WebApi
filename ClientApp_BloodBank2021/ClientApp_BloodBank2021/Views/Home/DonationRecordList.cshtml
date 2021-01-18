@@ -1,0 +1,87 @@
+﻿<html>
+<head>
+    <title></title>
+    <script src="~/Scripts/jquery-3.5.1.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.js"></script>
+
+</head>
+<body>
+
+    <button type="button" class="btn btn-primary" id="btnShowModal">Create New</button>
+
+    <table class="table table-bordered">
+        <thead class="bg-info">
+            <tr>
+                <th>BloodUser</th>
+                <th>AmountOfBlood</th>
+                <th>DonateDate</th>
+                <th>DonatePlace</th>
+                <th>ReasonOfDonation</th>
+                <th>DonorName</th>
+                <th>DonorContactNumber</th>
+                <th>Address</th>
+                <th>Age</th>
+                <th>Profession</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tblDonation">
+    
+        </tbody>
+    </table>
+
+
+
+    <div>
+        <!-- Modal -->
+        <div class="modal fade" id="DonationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/" method="post">
+                            <table>
+                                <tr>
+                                    <td>Blood User</td>
+                                    <td><input type="text" name="BloodReceivedBy" id="BloodReceivedBy" value="" class="form-control" placeholder="Enter BloodUserName" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Amount Of Blood</td>
+                                    <td><input type="text" name="AmountOfBlood" id="AmountOfBlood" value="" class="form-control" placeholder="Enter AmountOfBlood (beg)" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Donate Date</td>
+                                    <td><input type="datetime-local" name="DonateDate" id="DonateDate" value="" class="form-control" placeholder="Enter DonateDate" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Donate Place</td>
+                                    <td><input type="text" name="DonatePlace" id="DonatePlace" value="" class="form-control" placeholder="Enter DonatePlace" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Reason Of Donation</td>
+                                    <td><input type="text" name="ReasonOfDonation" id="ReasonOfDonation" value="" class="form-control" placeholder="Enter ReasonOfDonation" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Donor Contact Number</td>
+                                    <td><input type="text" name="DonorContactNumber" id="DonorContactNumber" value="" class="form-control" placeholder="Enter DonorContact" /></td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="SendToDatabase()">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/BloodAppScripts/BloodDonationRecordScripts.js"></script>
+</body>
+</html>
